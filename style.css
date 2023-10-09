@@ -8,15 +8,17 @@
 }
 
 body {
-  line-height: 1.6;
-  background-color: rgb(160, 174, 166); 
+  line-height: 1.8;
+  background-color: #111;
+  color: #ddd; 
 }
 
 h1 {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin: 40px 0 60px 0;
+  color: #f0f;
 }
 
 form {
@@ -26,27 +28,31 @@ form {
   margin-bottom: 60px;
 }
 
+#search-input, #search-button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff; 
+}
+
 #search-input {
   width: 60%;
   max-width: 400px;
-  padding: 10px 20px;
-  border: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  font-size: 18px;
   color: #333;
+  margin-right: 10px;
 }
 
 #search-button {
-  padding: 10px 20px;
-  background-color: #138065;
+  background-color: #3498DB;
   color: #fff;
-  border: none;
-  font-size: 18px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  border-radius: 5px;
-  margin-left: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #2980B9;
+  box-shadow: 0 0 20px #0ff; 
 }
 
 .search-results {
@@ -60,10 +66,16 @@ form {
 .search-result {
   margin-bottom: 60px;
   width: 30%;
-  height: 100%;
   border-radius: 5px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 2px solid #f0f; 
+  box-shadow: 0 0 10px #f0f; 
+}
+
+.search-result:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #f0f; 
 }
 
 .search-result img {
@@ -80,14 +92,22 @@ form {
 .search-result a {
   font-size: 20px;
   text-decoration: none;
-  color: #333;
-  display: block;
+  color: #0ff; 
+  display: block; 
+  text-align: center; 
   padding: 10px;
   text-transform: capitalize;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.search-result a:hover {
+  color: #fff; 
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; 
+}
+
+
 #show-more-button {
-  background-color: #008cba;
+  background-color: #3498DB;
   font-size: 18px;
   border: none;
   color: #fff;
@@ -97,7 +117,14 @@ form {
   margin: 30px auto;
   border-radius: 5px;
   cursor: pointer;
-  display: none;
+  transition: background-color 0.3s ease;
+  border: 2px solid #0f0; 
+  box-shadow: 0 0 10px #0f0; 
+}
+
+#show-more-button:hover {
+  background-color: #2980B9;
+  box-shadow: 0 0 20px #0f0; 
 }
 
 @media screen and (max-width: 768px) {
@@ -114,3 +141,4 @@ form {
     width: 100%;
   }
 }
+
